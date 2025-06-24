@@ -28,8 +28,8 @@ config.resolver.resolveRequest = (context, moduleName, platform) => {
           type: 'sourceFile',
         };
       } catch {
-        // If all else fails, return null to let Metro handle it
-        return null;
+        // If all else fails, delegate to the default resolver instead of returning null
+        return context.resolveRequest(context, moduleName, platform);
       }
     }
   }
