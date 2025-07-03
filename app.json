@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "SportGate Pass",
-    "slug": "sportgate-pass",
+    "name": "VeriGate Pass",
+    "slug": "verigate-pass",
     "version": "1.0.0",
     "owner": "boldflame-enterprises",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "sportgate-pass",
+    "scheme": "verigate-pass",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash-icon.png",
@@ -18,7 +18,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.sportgate.pass",
+      "bundleIdentifier": "com.verigate.pass",
       "infoPlist": {
         "NSFaceIDUsageDescription": "Use Face ID to authenticate and secure your access credentials.",
         "NSCameraUsageDescription": "Camera access is required for QR code functionality."
@@ -29,7 +29,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#2563eb"
       },
-      "package": "com.sportgate.pass",
+      "package": "com.verigate.pass",
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.INTERNET"

@@ -19,7 +19,7 @@ class DatabaseServiceClass {
 
   async initDatabase(): Promise<void> {
     try {
-      this.database = await SQLite.openDatabaseAsync('sportgate_pass.db');
+      this.database = await SQLite.openDatabaseAsync('verigate_pass.db');
       
       await this.createTables();
       await this.seedSampleData();
@@ -287,9 +287,9 @@ class DatabaseServiceClass {
 
   // Device fingerprinting using Expo Device
   async getDeviceFingerprint(): Promise<string> {
-    const deviceId = Device.osInternalBuildId || 'unknown';
-    const deviceName = Device.deviceName || 'unknown';
-    const osVersion = Device.osVersion || 'unknown';
+    const deviceId = Device.osInternalBuildId ?? 'unknown';
+    const deviceName = Device.deviceName ?? 'unknown';
+    const osVersion = Device.osVersion ?? 'unknown';
     
     const fingerprint = `${deviceId}-${deviceName}-${osVersion}`;
     const hashedFingerprint = await Crypto.digestStringAsync(
